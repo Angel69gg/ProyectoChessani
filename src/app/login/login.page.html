@@ -1,0 +1,22 @@
+<ion-header>
+  
+</ion-header>
+
+<ion-content id="contenido">
+  
+  <ion-item id="usuario">
+    <h1>PLATIMARKET</h1>
+    <ion-label position="floating">USUARIO</ion-label>
+    <ion-input [(ngModel)]="userService.usuario"></ion-input>
+    <ion-label position="floating">CONTRASEÑA</ion-label>
+    <ion-input type="password" [(ngModel)]="userService.password"></ion-input>
+    <ion-button class='botonLogin' color='dark' (click)="userService.iniciarSesion()">INICIAR SESIÓN</ion-button>
+    <ion-button class='botonLogin' color='dark' (click)="userService.SignIn()">REGISTRARME!</ion-button>
+  </ion-item>
+  
+  <ion-item class="logos">
+    <ion-icon name="logo-facebook"></ion-icon>
+    <ion-icon name="logo-google"></ion-icon>
+  </ion-item>
+ 
+</ion-content>

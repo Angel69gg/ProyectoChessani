@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
-  constructor() {}
-
+  
+usuario:string;
+  constructor(public actRoute: ActivatedRoute,
+    public router:Router,public userService:UsuarioService) {}
+  
+  
 }

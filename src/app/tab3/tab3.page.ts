@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor(public alertController: AlertController,
+    public router:Router,public userService:UsuarioService) {}
 
 }
