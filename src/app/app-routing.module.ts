@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'sign-in',
     loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
+  },
+  {
+    path: 'registrar-articulo',
+    loadChildren: () => import('./registrar-articulo/registrar-articulo.module').then( m => m.RegistrarArticuloPageModule)
+  },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./carrito/carrito.module').then( m => m.CarritoPageModule)
   }
 ];
 @NgModule({

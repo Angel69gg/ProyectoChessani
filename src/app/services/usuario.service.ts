@@ -16,6 +16,13 @@ tipoUsuario: string;
     this.tipoUsuario='';
     this.password='';
    }
+   carrito(){
+    this.router.navigate(['/carrito']);
+   }
+   agarticulo(){
+    this.router.navigate(['/registrar-articulo']);
+   }
+   
    SignIn(){
     this.router.navigate(['/sign-in']);
    }

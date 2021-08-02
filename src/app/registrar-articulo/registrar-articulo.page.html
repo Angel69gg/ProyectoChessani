@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <form #articuloForm="ngForm" (ngSubmit)="addArticulo(articuloForm)">
+        <input type="text" name="Imagen" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Imagen" 
+        placeholder="Link de imagen">
+        <input type="text" name="Nombre" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Nombre" 
+        placeholder="Ingresa nombre articulo">
+        <input type="text" name="tipo" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Tipo" 
+        placeholder="Tipo de ropa">
+        <input type="text" name="Descripcion" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Descripcion" 
+        placeholder="Descripcion">
+        <input type="text" name="Precio" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Precio" 
+        placeholder="Precio">
+
+        <div class="card-action">
+          <button color="success" class="btn right">Guardar</button>
+        </div>
+        
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

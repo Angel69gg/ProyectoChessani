@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { UsuarioService } from './services/usuario.service';
+import {ArticulosService} from './services/articulos.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { UsuarioService } from './services/usuario.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(public router:Router,public userService:UsuarioService) {
+  constructor(public router:Router,public userService:UsuarioService,private articuloService:ArticulosService) {
     let usuarioLoggeado = localStorage.getItem('userApp');//string
     if(usuarioLoggeado){
       console.log('string',usuarioLoggeado);
