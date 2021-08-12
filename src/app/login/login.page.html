@@ -2,21 +2,36 @@
   
 </ion-header>
 
-<ion-content id="contenido">
+<ion-content class="bg-class">
+  <div id="circle"></div>
+  <div id="circle2"></div>
+  <ion-card class="bg-class"> 
+    <ion-card-content >
+      <br>
+      <br>
+      <ion-text color="dark">
+        <h1>BIENVENIDO!</h1>
+      </ion-text>
+      <br>
+      <form #articuloForm="ngForm" (ngSubmit)="login(articuloForm)">
+        <input class="input" type="text" name="Usuario" #name="ngModel" [(ngModel)]="userService.selectedUsuario.Usuario" 
+        placeholder="Usuario">
+        <br>
+        <br>
+        <input class="input" type="password" name="Contrasena" #name="ngModel" [(ngModel)]="userService.selectedUsuario.Contrasena" 
+        placeholder="Contraseña">
+        <br>
+        <br>
+        <br>
+        <div class="card-action">
+          <button color="success" class="botonregistro">INICIAR SESION!</button>
+        </div>
+        <br>
+        <ion-button color="success" class="botonregistro" (click)="userService.SignIn()">REGISTRARME</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
   
-  <ion-item id="usuario">
-    <h1>PLATIMARKET</h1>
-    <ion-label position="floating">USUARIO</ion-label>
-    <ion-input [(ngModel)]="userService.usuario"></ion-input>
-    <ion-label position="floating">CONTRASEÑA</ion-label>
-    <ion-input type="password" [(ngModel)]="userService.password"></ion-input>
-    <ion-button class='botonLogin' color='dark' (click)="userService.iniciarSesion()">INICIAR SESIÓN</ion-button>
-    <ion-button class='botonLogin' color='dark' (click)="userService.SignIn()">REGISTRARME!</ion-button>
-  </ion-item>
-  
-  <ion-item class="logos">
-    <ion-icon name="logo-facebook"></ion-icon>
-    <ion-icon name="logo-google"></ion-icon>
-  </ion-item>
+
  
 </ion-content>

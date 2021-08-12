@@ -1,8 +1,17 @@
-const Articulo = require("../models/usuario");
+const Usuario = require("../models/usuario");
 
 const UsuarioCtrl = {};
 
 UsuarioCtrl.getUsuario = async (req, res, next) => {
+  Usuario.findOne( {Usuario: req.body.Usuario,Contrasena: req.body.Contrasena})
+  .then( user =>{
+    console.log(user)
+    if(user) res.status(200).json({user:user})
+    if(!user) res.status(404).json({error: 'Usuario no registrado'})
+  }
+  )
+};
+UsuarioCtrl.getUsuarios = async (req, res, next) => {
   const usuario = await Usuario.find();
   res.json(usuario);
 };

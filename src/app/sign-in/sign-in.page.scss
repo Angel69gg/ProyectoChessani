@@ -1,23 +1,15 @@
 
 
 
-    .input{
-        padding-left: 40px;
-        padding-right: 40px;
-        color: white;
-    }
 
 .botonregistro{
-width: 400px;
-padding-left: 20px;
-}
-ion-content{
+width: 300px;
 
-    --ion-background-color:#000000;
 }
+
 .LOGO{
-    padding-left: 90px;
-    color: white;
+    padding-left: 70px;
+    color: rgb(0, 0, 0);
 }
 .descuento{
     color: red;
@@ -26,4 +18,8 @@ ion-content{
 ion-item{
 
     border-color: red;
+    }
+    .input{
+        width: 300px;
+        height: 30px;
     }

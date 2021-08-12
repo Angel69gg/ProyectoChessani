@@ -26,3 +26,51 @@ padding-left: 120px;
     
 }
 
+.cardLogin{
+    height: 870px;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.input{
+    width: 200px;
+    height: 30px;
+}
+
+.botonregistro{
+    width: 200px;
+}
+
+.bg-class{
+    width: auto;   
+
+    height: 650px;
+    align-items: center;
+    padding-left: 50px;
+  }
+
+  #circle {
+      position: absolute;
+    
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    border-radius: 50%;
+    box-shadow: 
+                200px 2px 0 0 #009901,
+                
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  }
+  #circle2 {
+    position: absolute;
+  
+  width: 100px;
+  height: 100px;
+  top: 200px;
+  left: 40px;
+  border-radius: 50%;
+  box-shadow: 
+              200px 2px 0 0 #009901,
+              
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+}

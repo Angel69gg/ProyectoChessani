@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Articulo } from '../models/articulo.modelo';
+import { Usuario } from '../models/usuario.modelo';
 import { ArticulosService } from '../services/articulos.service';
 import { UsuarioService } from '../services/usuario.service';
 
@@ -10,13 +11,16 @@ import { UsuarioService } from '../services/usuario.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  
 usuario:string;
+  
   constructor(public actRoute: ActivatedRoute,
     public router:Router,public userService:UsuarioService,public articuloService:ArticulosService) {}
   ngOnInit(){
-this.getArticulos();
+this.getArticulos();  
+
   }
+  
+ 
   getArticulos(){
     this.articuloService.getArticulos()
     .subscribe(res =>{
@@ -24,6 +28,37 @@ this.getArticulos();
       console.log(res);
     });
   }
+  getUsuario(){
+    this.userService.getUsuario()
+    .subscribe(res =>{
+      this.userService.usuarios = res as Usuario[];
+      console.log(res)
+    });
+  }
+  getUsuarios(){
+    this.userService.getUsuario()
+    .subscribe(res =>{
+      this.userService.usuarios = res as Usuario[];
+      console.log(res)
+    });
+  }
+
+  deleteArticulos(_id: string){
+    if(confirm("Seguro que deseas borrar el articulo?")){
+    this.articuloService.deleteArticulo(_id)
+    .subscribe(res =>{
+     this.getArticulos()
+    });
+  }
+}
+agregarAlCarrito(Articulo){
+  console.log("anadido correctamente")
+  this.articuloService.agregarArticulo(Articulo);
+  console.log(Articulo)
+}
+  
+
+  
   doRefresh(event) {
     console.log('Begin async operation');
 

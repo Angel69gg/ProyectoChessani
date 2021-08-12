@@ -7,5 +7,20 @@
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor="let a of articulosService.carrito">
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title> <h1>{{a.Nombre}}</h1></ion-card-title>
+        <img [src]=" a.Imagen" >
+      </ion-card-header>
+      {{a.Tipo}}
+      <ion-card-content>
+        {{a.Descripcion}} 
+      </ion-card-content>
+      <h1> ${{a.Precio}}.00</h1>
+      <ion-button *ngIf="userService.tipoUsuario=='Admin'" color='warning' (click)="deleteArticulos(Articulos._id)">eliminar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
 
 </ion-content>

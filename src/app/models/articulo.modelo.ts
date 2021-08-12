@@ -1,4 +1,5 @@
 export class Articulo {
+    static cantidad: number;
     constructor(_id='', Imagen='' , Nombre='',Tipo='',Descripcion='',Precio=0){
 this._id=_id;
 this.Imagen=Imagen;

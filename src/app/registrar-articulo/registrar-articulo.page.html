@@ -10,7 +10,7 @@
   <ion-card>
     <ion-card-content>
       <form #articuloForm="ngForm" (ngSubmit)="addArticulo(articuloForm)">
-        <input type="text" name="Imagen" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Imagen" 
+        <input type="text" name="Usuario" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Imagen" 
         placeholder="Link de imagen">
         <input type="text" name="Nombre" #name="ngModel" [(ngModel)]="articulosService.selectedArticulo.Nombre" 
         placeholder="Ingresa nombre articulo">

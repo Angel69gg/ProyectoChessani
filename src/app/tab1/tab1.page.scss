@@ -5,3 +5,18 @@ ion-toolbar{
 #cart{
     --ion-background-color: #ffffff;
 }
+
+ion-card{
+    flex-direction: column;
+   
+    margin: 0 !important;
+    position: static;
+  }
+
+  
+    ion-card {
+        display: inline-block;
+        width: 100%;
+        margin: 10px auto  ;
+       
+    }

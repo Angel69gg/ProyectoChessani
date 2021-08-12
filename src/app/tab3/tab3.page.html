@@ -7,9 +7,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<ion-button class='botonLogin' color='success' (click)="userService.agarticulo()">agregar articulo</ion-button>
-  <ion-button class="logout" color="danger" (click)="userService.logout()">Cerrar Sesion </ion-button>
-   
-
- 
+<ion-button *ngIf="userService.tipoUsuario=='Vendedor'" class='botonLogin' color='success' (click)="userService.agarticulo()">agregar articulo</ion-button>
+<ion-button class="logout" color="danger" (click)="userService.logout()">Cerrar Sesion </ion-button>
 </ion-content>

@@ -15,24 +15,23 @@
   <ion-icon name="pricetag-outline"></ion-icon> 15% OFF EN TU PRIMER PEDIDO
 </ion-item>
 
-  <ion-item class="input">
-    <ion-label position="floating" >EMAIL</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item class="input">
-    <ion-label position="floating">USUARIO</ion-label>
-    <ion-input></ion-input>
-  </ion-item >
-  <ion-item class="input">
-    <ion-label position="floating">CONTRASEÑA</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  <ion-item class="input">
-    <ion-label position="floating">CONFIRMAR CONTRASEÑA</ion-label>
-    <ion-input></ion-input>
-  </ion-item>
-  
-  <ion-button class='botonregistro' color='dark'>REGISTRARME!</ion-button>
+
+<ion-card class="bg-class">
+  <ion-card-content>
+    <form #articuloForm="ngForm" (ngSubmit)="addUsuario(articuloForm)">
+      <input  class="input" type="text" name="Usuario" #name="ngModel" [(ngModel)]="usuariosService.selectedUsuario.Usuario" 
+      placeholder="Usuario">
+      <input class="input" type="password" name="Contrasena" #name="ngModel" [(ngModel)]="usuariosService.selectedUsuario.Contrasena" 
+      placeholder="Contraseña">
+      <div class="card-action">
+        <button color="success" class="botonregistro">REGISTRARME </button>
+      </div>
+      
+    </form>
+  </ion-card-content>
+</ion-card>
+
+
  
   
    

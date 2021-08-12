@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Articulo } from '../models/articulo.modelo';
+import { ArticulosService } from '../services/articulos.service';
+import { UsuarioService } from '../services/usuario.service';
+
 
 @Component({
   selector: 'app-carrito',
@@ -6,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carrito.page.scss'],
 })
 export class CarritoPage implements OnInit {
+ 
+  carrito: Articulo[]=[];
+  constructor(public articulosService:ArticulosService,public userService: UsuarioService) {
 
-  constructor() { }
+   }
 
   ngOnInit() {
+  this.carrito=  this.articulosService.obtenerCarrito()
   }
+
 
 }
